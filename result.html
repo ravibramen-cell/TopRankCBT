@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Top Rank CBT Result</title>
+
+<style>
+
+body{
+
+font-family:Arial;
+
+background:#0f172a;
+
+color:white;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+}
+
+.box{
+
+background:#1e293b;
+
+padding:40px;
+
+border-radius:15px;
+
+text-align:center;
+
+width:350px;
+
+}
+
+h1{
+
+margin-bottom:25px;
+
+}
+
+.score{
+
+font-size:50px;
+
+color:#22c55e;
+
+margin:20px 0;
+
+}
+
+button{
+
+padding:15px 30px;
+
+border:none;
+
+background:#22c55e;
+
+color:white;
+
+font-size:18px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>Exam Result</h1>
+
+<div class="score" id="score">
+0
+</div>
+
+<p id="msg"></p>
+
+<br>
+
+<button onclick="location.href='index.html'">
+
+Home
+
+</button>
+
+</div>
+
+<script>
+
+let score=localStorage.getItem("score");
+
+document.getElementById("score").innerHTML=score+"/5";
+
+if(score>=4){
+
+document.getElementById("msg").innerHTML="Excellent";
+
+}
+
+else if(score>=2){
+
+document.getElementById("msg").innerHTML="Good";
+
+}
+
+else{
+
+document.getElementById("msg").innerHTML="Need Practice";
+
+}
+
+</script>
+
+</body>
+
+</html>
